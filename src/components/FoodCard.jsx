@@ -1,8 +1,17 @@
 import React from "react";
 import { FaRupeeSign } from "react-icons/fa";
 import { IoStar } from "react-icons/io5";
+import {  useDispatch } from "react-redux";
+import { addToCart } from "../redux/slices/CartSlice";
 
 function FoodCard({id, name, price ,desc='' , img, rating}) {
+
+   const dispatch = useDispatch();
+
+   const handleAdd = () => {
+    dispatch(addToCart({id, name, price, rating, img, qty:1}))
+   }
+
   return (
     <div className="font-bold w-[250px] bg-white p-5 flex flex-col rounded-lg gap-3 shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
       <img
@@ -24,7 +33,7 @@ function FoodCard({id, name, price ,desc='' , img, rating}) {
         <span className="flex items-center text-sm text-gray-700">
           <IoStar className="text-yellow-400 mr-1" /> {rating}
         </span>
-        <button className="p-2 text-sm font-medium text-white bg-green-500 rounded-lg hover:bg-green-700 transition-colors duration-300">
+        <button onClick={handleAdd} className="p-2 text-sm font-medium text-white bg-green-500 rounded-lg hover:bg-green-700 transition-colors duration-300">
           Add to Cart
         </button>
       </div>
