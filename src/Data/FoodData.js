@@ -185,12 +185,12 @@ const FoodData = [
         name: "Spicy Chicken Wings",
         price: 120,
         desc: "Crispy and fiery, these spicy chicken wings are perfect for anyone who loves a kick. Marinated with a blend of spices and served with a side of cool ranch dip.",
-        category: "Appetizer",
+        category: "Lunch",
         rating: 4.8,
       },
       {
         id: 22,
-        img: "https://img.freepik.com/free-photo/fresh-salad-plate_144627-19099.jpg?w=996&t=st=1693062487~exp=1693063087~hmac=f24b2d8358d228f2fbecf6f7e60990a70a2543cf179ebba08e30c75f80c94b84",
+        img: "https://www.australianavocados.com.au/wp-content/uploads/2022/02/Avocado-Caesar-Salad.png",
         name: "Vegan Avocado Salad",
         price: 130,
         desc: "A refreshing vegan salad made with fresh avocado slices, cherry tomatoes, cucumber, and a tangy lemon vinaigrette. Perfect for a light lunch.",
@@ -255,7 +255,7 @@ const FoodData = [
       },
       {
         id: 29,
-        img: "https://img.freepik.com/free-photo/delicious-chocolate-milkshake-topped-with-whipped-cream_144627-32840.jpg?w=996&t=st=1693062682~exp=1693063282~hmac=d3a3cb05bc49a387c348a44581f4fa5d15831325d431cc6223f37d4a71db2329",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdfDjYmsly2FXQGXGVXH6sPaNqUnMAmet64g&s",
         name: "Chocolate Milkshake",
         price: 80,
         desc: "A creamy and rich chocolate milkshake made with premium chocolate ice cream and topped with whipped cream.",

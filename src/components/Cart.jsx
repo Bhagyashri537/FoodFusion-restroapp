@@ -8,11 +8,15 @@ import {
   removeFromCart,
 } from "../redux/slices/CartSlice"; 
 import { MdDeleteOutline } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+
 
 function Cart() {
   const [activeCart, setActiveCart] = useState(false); 
   const cartItems = useSelector((state) => state.storeCart.cart); 
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   // Calculate total number of items in the cart
   const totalItems = cartItems.reduce((total, item) => total + item.qty, 0);
@@ -115,7 +119,7 @@ function Cart() {
         </div>
 
        
-        <button className="mt-4 w-full py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors duration-300">
+        <button onClick={() => navigate('/success')} className="mt-4 w-full py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors duration-300">
           Checkout
         </button>
       </div>
@@ -126,7 +130,7 @@ function Cart() {
           className="relative cursor-pointer"
           onClick={() => setActiveCart(!activeCart)} 
         >
-          <FaCartShopping className="rounded-full bg-white shadow-xl text-5xl p-3" />
+          <FaCartShopping className={`rounded-full bg-white shadow-xl text-5xl p-3 ${totalItems > 0 && "animate-bounce delay-500 transition-all"} `} />
 
          
           {totalItems > 0 && (
