@@ -29,7 +29,7 @@ function Success() {
             Your order has been placed successfully. Thank you for choosing us!
           </p>
           <button onClick={() => navigate('/')} className='mt-6 bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-lg font-medium shadow-md transition-colors'>
-          Wanna Order Something Else?
+          wanna go back to home page
           </button>
         </div>
       )}
